@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Form</title>
+    <link rel="stylesheet" href="stylesheet.css">
+</head>
+
+<body>
+    <!--Survey Holder-->
+    <div class="container">
+        <div class="title-tag">
+            <h1 class="survey-title"><span>Community</span> Interest Survey</h1>
+        </div>
+        <!--Start Section Boxes-->
+        <div class="sec-container">
+            <div class="section-wrapper">
+                <div class="section-box">
+                    <div class="company-info">
+                        <h3>The REAL Courses</h3>
+                        <p class="intro">In an effort to foster deeper connections as we continue laying the foundation for our amazing community, we ask that you take a couple of minutes to fill out our community interest survey. Feel free to further elaborate any interests,
+                            skills, ideas, or needs that you may have to offer in the 'additional info boxes' located in the survey. Thank you for your valuable input.</p>
+                    </div>
+                </div>
+
+                <!--Contact Box-->
+                <div class="section-box">
+                    <h3 class="needs">Contact Info:</h3>
+                    <form class="personal-info">
+                        <p>
+                            <label></label>
+                            <input type="text" autocomplete="off" id="full-name" name="name" placeholder="Full Name">
+                        </p>
+                        <p>
+                            <label></label>
+                            <input type="email" autocomplete="off" id="email" name="email" Placeholder="Email Address">
+                        </p>
+                        <p>
+                            <label></label>
+                            <input type="text" autocomplete="off" id="phone-number" name="phone" placeholder="Phone Number">
+                        </p>
+                    </form>
+                </div>
+
+                <!--Question 1-->
+                <div class="section-box">
+                    <h3 class="question">Would you prefer to speak to someone directly instead of filling out this survey?</h3>
+                    <form>
+                        <p>
+                            <label for="firstYes" class="radioLabel">
+                                <input type="radio" class="radioSelect" id="prefer-y" name="yes-no"><span class="label-text">Yes</span>
+                                </label>
+                        </p>
+                        <p>
+                            <label for="firstNo" class="radioLabel">
+                                    <input type="radio" class="radioSelect" id="prefer-n" name="yes-no"><span class="label-text">No</span>
+                                </label>
+                        </p>
+                    </form>
+                </div>
+
+                <!--Question 2-->
+                <div class="section-box">
+                    <h3 class="question">Have you heard about The REAL Courses?</h3>
+                    <form>
+                        <p>
+                            <label for="secondYes" class="radioLabel">
+                                    <input id="yes" type="radio" class="radioSelect" name="yesNo"><span class="label-text">Yes</span>
+                                </label>
+                        </p>
+                        <p>
+                            <label for="secondNo" class="radioLabel">
+                                    <input id="modalClick" type="radio" name="yesNo" class="radioSelect"><span class="label-text">No</span>
+                                </label>
+                        </p>
+                    </form>
+
+                    <!-- Modal -->
+                    <div id="modalBox" class="modal">
+                        <div class="modal-content">
+                            <span class="closeBtn">&times;</span>
+                            <p><span class="modalReal">real</span> stands for: <strong>R</strong>esilience, <strong>E</strong>mpowerment, <strong>A</strong>cceptance, &#38 <strong>L</strong>ove. We are a community of individuals that have joined together
+                                to promote excellence in personal development. We design and conduct courses, workshops, and other activities to encourage the best in all of us – the best version of ourselves, personal empowerment and integrity, healthy
+                                and loving relationships, and enlightened communities.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!--Question 3: Community Needs-->
+                <div class="section-box">
+                    <h3 class="needs">Community Needs:</h3>
+                    <p class="interest">Check any areas of interest</p>
+
+                    <form>
+                        <label class="check-holder" for="community-needs">
+                                <input type="checkbox" id="virtual-community" name="com-needs">Virtual community/connection meetings &#40;peer led&#41;
+                                <span class="checkmark"></span>
+                            </label>
+
+                        <label class="check-holder" for="community-needs">
+                                <input type="checkbox" id="virtual-fun" name="com-needs">Virtual fun with others activities &#40;peer led&#41;
+                                <span class="checkmark"></span>
+                            </label>
+
+                        <label class="check-holder" for="community-needs">
+                                <input type="checkbox" id="virtual-support" name="com-needs">Virtual topic related support groups &#40;peer led&#41;
+                                <span class="checkmark"></span>
+                            </label>
+
+                        <p class="text-area">
+                            <textarea name="message" id="message" rows="5" placeholder="Additional info here"></textarea>
+                        </p>
+                    </form>
+                </div>
+
+                <!--Question 4: Personal Development Needs-->
+                <div class="section-box">
+                    <h3 class="needs">Personal Development Needs:</h3>
+                    <p class="interest">Check any areas of interest</p>
+
+                    <form>
+                        <label class="check-holder" for="personal-needs">
+                                <input type="checkbox" id="topic-specific" name="pers-needs">Virtual topic specific/process courses &#40;instructor&#47;coach led&#41;
+                                <span class="checkmark"></span>
+                            </label>
+
+                        <label class="check-holder" for="personal-needs">
+                                <input type="checkbox" id="men-women-support" name="pers-needs">Virtual women and men support groups &#40;instructor&#47;coach led&#41;
+                                <span class="checkmark"></span>
+                            </label>
+
+                        <label class="check-holder" for="personal-needs">
+                                <input type="checkbox" id="individual" name="pers-needs">Virtual individual sessions &#40;instructor&#47;coach led&#41;
+                                <span class="checkmark"></span>                            
+                            </label>
+
+                        <label class="check-holder" for="personal-needs">
+                                <input type="checkbox" id="couples" name="pers-needs">Virtual couples sessions &#40;instructor&#47;coach led&#41;
+                                <span class="checkmark"></span>
+                            </label>
+
+                        <label class="check-holder" for="personal-needs">
+                                <input type="checkbox" id="review" name="pers-needs">Student review of in-person weekend course &#40;when available&#41;
+                                <span class="checkmark"></span>
+                            </label>
+
+                        <label class="check-holder" for="personal-needs">
+                                <input type="checkbox" id="assisting" name="pers-needs">Assisting in-person weekend course &#40;when available&#41;
+                                <span class="checkmark"></span>
+                            </label>
+
+                        <label class="check-holder" for="personal-needs">
+                                <input type="checkbox" id="in-person" name="pers-needs">In-person advanced courses &#40;when available&#41;
+                                <span class="checkmark"></span>
+                            </label>
+
+                        <p class="text-area">
+                            <textarea name="message" id="message" rows="5" placeholder="Additional info here"></textarea>
+                        </p>
+                    </form>
+                </div>
+
+                <!--Question 5: Committee Interest-->
+                <div class="section-box">
+                    <h3 class="needs">Organizational Committee Interest:</h3>
+                    <p class="interest">Select any committees for which you would like to volunteer</p>
+                    <form>
+                        <label class="check-holder" for="committee">
+                                <input type="checkbox" id="comm-building" name="committee-interest">Community Building Committee &#40;Build and maintain our community&#41;
+                                <span class="checkmark"></span>
+                            </label>
+
+                        <label class="check-holder" for="committee">
+                                <input type="checkbox" id="activities" name="committee-interest">Activities Committee &#40;Develop and facilitate virtual activities&#41;
+                                <span class="checkmark"></span>
+                            </label>
+
+                        <label class="check-holder" for="committee">
+                                <input type="checkbox" id="marketing" name="committee-interest">Marketing&#47;Sales Committee &#40;Promote and enroll REAL courses/support groups&#41;
+                                <span class="checkmark"></span>
+                            </label>
+
+                        <p class="text-area">
+                            <textarea name="message" id="message" rows="5" placeholder="Additional info here"></textarea>
+                        </p>
+                    </form>
+                </div>
+
+                <!--Question 6, Submit Button Here-->
+                <div class="section-box">
+                    <form>
+                        <p class="full">
+                            <button>Submit</button>
+                        </p>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <footer>
+            <div class="fContainer">
+                <p>&#169; 2021 The REAL Courses. All Rights Reserved.</p>
+            </div>
+        </footer>
+    </div>
+    <!--End Container-->
+    <script src="script.js"></script>
+</body>
+
+</html>
