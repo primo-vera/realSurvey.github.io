@@ -87,7 +87,7 @@ hr {
     display: block;
     background-color: #f4f4f4;
     position: fixed;
-    margin: 25%;
+    margin: 20% auto;
     padding: 20px;
     width: 50%;
     height: 50%;
@@ -185,6 +185,4 @@ footer {
         color: #222e3a;
         text-align: left !important;
     }
-    .modal .modal-content {
-        margin: 100px 400px;
-    }                                                                       
+  
