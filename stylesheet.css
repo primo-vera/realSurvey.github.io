@@ -1,12 +1,13 @@
 * {
     box-sizing: border-box;
+    overscroll-behavior: none;
 }
 
 body {
     background: #92bde7;
     color: #485e74;
     line-height: 1.6;
-    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     padding: 1em;
 }
 
@@ -15,146 +16,60 @@ body {
     margin-left: auto;
     margin-right: auto;
     padding: 1em;
-    background-color: #0000003f;
 }
 
-.title-tag {
-    max-width: 1170px;
-    position: static;
-    text-align: center;
-}
-
-ul {
-    list-style: none;
+.info p {
     padding: 0;
 }
 
-ul a {
-    text-decoration: none;
-    color: #485e74;
-}
-
-ul a:hover {
-    color: #c3d5e6;
-    transition: color 0.25s ease-out;
-}
-
-.survey-title {
+.title {
     text-align: center;
-    font-size: 45px;
     text-shadow: 1px 1px 1px #000000;
 }
 
-.survey-title span {
-    color: #ffffff;
-    text-shadow: 2px 2px 4px #000000;
+.title span {
+    color: #fff;
+    text-shadow: 1px 1px 1px #000000;
 }
 
-.section-wrapper>* {
-    padding: 4em;
-}
-
-.section-box {
-    margin-bottom: 1em;
-    padding: 1em;
-    max-width: 1170px;
-    margin-left: auto;
-    margin-right: auto;
+.wrapper {
     box-shadow: 0 0 20px 0 rgba(72, 94, 116, 0.7);
-    background: #f9feff;
-    border-radius: 15px;
 }
 
-.header-top,
-.company-info h3,
-.company-info ul {
+.wrapper>* {
+    padding: 1em;
+}
+
+.top-box {
+    background: #c9e6ff;
+}
+
+.top-box h3,
+.top-box p {
     text-align: center;
     margin: 0 0 1rem 0;
 }
 
-.company-info h3 {
-    font-size: 30px;
-    padding: 0;
-    margin: 0;
+.formWrap {
+    background: #f9feff;
 }
 
-h3 {
-    font-size: 24px;
-    padding: 0;
-    margin: 0;
+.real {
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 700;
 }
 
-.needs {
-    font-size: 28px;
-    font-weight: 550;
+hr {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    height: 3px;
+    color: #92bde7;
+    background-color: #1360ac;
+    opacity: 100;
 }
-
-.question {
-    font-size: 25px;
-    font-weight: 500;
-}
-
-.interest {
-    border: 0;
-    margin: 0 0 20px 0;
-    padding: 0;
-}
-
-.sect-header {
-    font-size: 1.5em;
-    font-weight: 800;
-}
-
-.subheading {
-    display: flex;
-    font-size: 15px;
-    color: #485e74d9;
-    padding-top: 0;
-    padding-bottom: 10px;
-}
-
-.intro {
-    margin: 2em 1em 2em 1em;
-    line-height: 2em;
-    font-size: 18px;
-}
-
-
-/* Radio Buttons */
-
-.label-text {
-    font-size: 20px;
-}
-
-
-/* Customize the label (the check-holder) */
-
-.check-holder {
-    display: block;
-    position: relative;
-    line-height: 2em;
-    cursor: pointer;
-    font-size: 1.5em;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-}
-
-.check-holder input[type="checkbox"],
-input[type="radio"] {
-    width: 25px;
-    height: 25px;
-    margin-right: 2em;
-}
-
-
 /* Modal */
-
-.modal-content {
-    font-size: 17px;
-    line-height: 1.6;
-}
 
 .modal {
     display: none;
@@ -164,18 +79,24 @@ input[type="radio"] {
     top: 0;
     height: 100%;
     width: 100%;
-    overflow: auto;
+    overflow: hidden;
     background-color: rgba(0, 0, 0, 0.8);
 }
 
 .modal-content {
+    display: block;
     background-color: #f4f4f4;
-    margin: 25% auto;
+    position: fixed;
+    margin: 25%;
     padding: 20px;
     width: 50%;
+    height: 50%;
     border-radius: 15px;
     border: 2px solid #000000;
     box-shadow: 0 5px 8px 0 rgba(72, 94, 116, 0.7), 0 7 20px 0 rgba(0, 0, 0, 0.17);
+    font-size: 17px;
+    line-height: 1.6;
+    overflow: scroll;
 }
 
 .closeBtn {
@@ -194,117 +115,76 @@ input[type="radio"] {
     cursor: pointer;
 }
 
-.modal p {
-    margin: 20px 20px 5px 5px;
-    padding-top: 10px;
-    letter-spacing: 1px;
+footer {
+    margin: 1em 0 0 0;
+    padding: 0;
+    color: #222e3a;
+    text-align: center;
 }
+/* Form Styles */
 
-.modalReal {
-    text-transform: uppercase;
-    font-size: 1em;
-    font-weight: 700;
-    letter-spacing: 5px;
-}
-
-strong {
-    font-size: 1em;
-    font-weight: 500px;
-}
-
-.personal-info p {
+.formWrap form {
     display: grid;
-    /*grid-template-columns: 1fr 1fr;*/
-    font-size: 1em;
-    border: none;
+    grid-gap: 20px;
 }
 
-.personal-info input {
-    line-height: 3em;
-    max-width: 75%;
-    font-size: 20px;
-    color: #485e74;
-    background-color: transparent;
-    border-top: none;
-    border-right: none;
-    border-bottom: solid 1px rgba(101, 115, 130, 0.7);
-    border-left: none;
-    background-color: rgba(249, 250, 251, 0.3);
-}
-
-input:active {
-    outline: none;
-    border: none;
-}
-
-::placeholder {
-    font-size: 15px;
-    color: rgba(118, 118, 118, 0.7);
-}
-
-.section-box h3 {
-    margin: 0;
-    padding: 0;
-}
-
-.contact form label {
+.formWrap form label {
     display: block;
-    padding: 0;
 }
 
-.text-area {
-    max-width: 75%;
-    border: none;
-}
-
-.contact form .full {
+.formWrap form .full {
     grid-column: 1 / 3;
 }
 
-.section-box .full button {
-    width: 100%;
-    padding: 1em;
-    border: 1px solid #c9e6ff;
-    background: #c9e6ff;
-    text-transform: uppercase;
-    font-size: 1em;
-}
-
-.contact form button,
-.contact form input,
-.text-area textarea {
+.formWrap .contact .capture,
+.formWrap form textarea,
+.formWrap form .full button,
+.formWrap form .full input,
+.formWrap form .full textarea {
     width: 100%;
     padding: 1em;
     border: 1px solid #c9e6ff;
 }
 
-.contact form button {
+.formWrap form button {
     background: #c9e6ff;
     border: 0;
     text-transform: uppercase;
 }
 
-.section-box .full button:hover,
-.section-box .full button:focus {
+.formWrap form button:hover,
+.contact form button:focus {
     background: #92bde7;
-    color: #ffffff;
+    color: #fff;
     outline: 0;
-    transition: background-color 1s ease-out;
+    transition: background-color 2s ease-out;
 }
-
-.fContainer {
-    margin: 0 0 2em 1em;
-    padding: 0;
-    font-color: #000000;
-    text-shadow: 1px #ffffff;
-    font-weight: 700;
-}
-
-
 /* Large Screens */
 
-@media (min-width: 700px) {
-    .sec-container>* {
-        padding: 0 5em 5em 5em;
+@media(min-width:700px) {
+    .wrapper {
+        display: grid;
+        grid-template-columns: 1fr 2fr;
     }
-}
+    .wrapper {
+        .wrapper>* {
+            padding: 2em;
+        }
+    }
+    .wrapper .top-box {
+        text-align: left;
+    }
+    .top-box h3,
+    .top-box p,
+    .brand {
+        text-align: left;
+    }
+    footer {
+        margin: 1em 0 0 0;
+        padding: 0;
+        color: #222e3a;
+        text-align: left !important;
+    }
+    .modal .modal-content {
+        margin: 100px 400px;
+    }                                                                       
