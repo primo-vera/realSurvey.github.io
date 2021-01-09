@@ -76,7 +76,7 @@ hr {
 /* Modal */
 
 .modal {
-    /*display: none;*/
+    display: none;
     position: fixed;
     body: fixed;
     z-index: 1;
