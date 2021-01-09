@@ -50,6 +50,10 @@ body {
     margin: 0 0 1rem 0;
 }
 
+h3 {
+    font-size: 1.5em;
+}
+
 .formWrap {
     background: #f9feff;
 }
@@ -72,8 +76,9 @@ hr {
 /* Modal */
 
 .modal {
-    display: none;
+    /*display: none;*/
     position: fixed;
+    body: fixed;
     z-index: 1;
     left: 0;
     top: 0;
@@ -84,20 +89,19 @@ hr {
 }
 
 .modal-content {
-    display: block;
     background-color: #f4f4f4;
-    position: relative;
-    margin: 50% auto;
-    padding: 10px;
-    width: 50%;
-    height: 50%;
+    position: fixed;
+    margin: 40% auto;
+    padding: 15px;
     border-radius: 15px;
     border: 2px solid #000000;
     box-shadow: 0 5px 8px 0 rgba(72, 94, 116, 0.7), 0 7 20px 0 rgba(0, 0, 0, 0.17);
-    font-size: 15px;
     letter-spacing: 1.2;
     line-height: 1.6;
-    overflow: scroll;
+}
+
+.modal-content p {
+    font-size: 18px;
 }
 
 .closeBtn {
@@ -137,6 +141,10 @@ footer {
     grid-column: 1 / 3;
 }
 
+.interest {
+    font-size: 15;
+}
+
 .formWrap .contact .capture,
 .formWrap form textarea,
 .formWrap form .full button,
@@ -160,6 +168,16 @@ footer {
     outline: 0;
     transition: background-color 2s ease-out;
 }
+
+.checkHolder {
+    margin: 5px;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+    padding: 0 10px 10px 0;
+    margin: 0 10px 10px 0;
+}
 /* Large Screens */
 
 @media(min-width:700px) {
@@ -179,4 +197,12 @@ footer {
     .top-box p,
     .brand {
         text-align: left;
+    }
+    .modal-content {
+        margin: 20%;
+        padding: 15px;
+        border-radius: 15px;
+        border: 2px solid #000000;
+        box-shadow: 0 5px 8px 0 rgba(72, 94, 116, 0.7), 0 7 20px 0 rgba(0, 0, 0, 0.17);
+        overflow: scroll !important;
     }
